@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { Header } from './features/Header';
 import { LoginPage } from './features/Login';
@@ -17,6 +17,8 @@ export const AppRouter = () => {
         <Routes>
           <Route path="/*" element={<GamesRoutes />} />
           <Route path="/auth/login" element={<LoginPage />} />
+
+          <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       </main>
       <Footer />
