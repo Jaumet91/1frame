@@ -16,9 +16,11 @@ export const AppRouter = () => {
       <main>
         <Routes>
           <Route path="/*" element={<GamesRoutes />} />
-          <Route path="/auth/login" element={<LoginPage />} />
-
-          <Route path="/*" element={<Navigate to="/" />} />
+          {false ? (
+            <Route path="/*" element={<Navigate to="/" replace />} />
+          ) : (
+            <Route path="/auth/login" element={<LoginPage />} />
+          )}
         </Routes>
       </main>
       <Footer />

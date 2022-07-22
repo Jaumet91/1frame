@@ -1,8 +1,11 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+
 import { AppRouter } from '../src/AppRouter';
 
+// TODO
 describe('Tests in <AppRouter />', () => {
   test('should render /home page', () => {
     render(
@@ -12,7 +15,5 @@ describe('Tests in <AppRouter />', () => {
     );
   });
 
-  test("shouldn't display /login if logged", () => {
-    const status = 'authenticated';
-  });
+  test("shouldn't display /auth/login if logged", () => {});
 });

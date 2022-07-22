@@ -3,10 +3,17 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface AuthState {
   displayName: null | string;
   email: null | string;
-  errorMessage: null | string;
+  errorMessage: null | string | undefined;
   photoURL: null | string;
   status: string;
   uid: null | string;
+}
+
+interface User {
+  uid: string;
+  email: string;
+  displayName: string;
+  photoURL: string;
 }
 
 const initialState: AuthState = {
@@ -22,20 +29,20 @@ export const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    login: (state, { payload }: PayloadAction<AuthState>) => {
+    login: (state, { payload }: PayloadAction<User>) => {
       state.displayName = payload.displayName;
       state.email = payload.email;
       state.errorMessage = null;
       state.photoURL = payload.photoURL;
-      state.status = 'autenticated';
+      state.status = 'authenticated';
       state.uid = payload.uid;
     },
-    logout: (state, { payload }: PayloadAction<AuthState>) => {
+    logout: (state, { payload }: PayloadAction<string | undefined>) => {
       state.displayName = null;
       state.email = null;
-      state.errorMessage = payload.errorMessage;
+      state.errorMessage = payload;
       state.photoURL = null;
-      state.status = 'not-autenticated';
+      state.status = 'not-authenticated';
       state.uid = null;
     },
     checkingCredentials: (state) => {
