@@ -3,13 +3,16 @@ import { render, screen } from '@testing-library/react';
 
 import { Sidebar } from '../../../src/features/Sidebar/Sidebar';
 
-describe('Tests in Navbar.tsx', () => { 
+describe('Tests in <Sidebar.tsx />', () => {
+  test('should render the navigation menu by default', () => {
+    render(<Sidebar />);
 
-  test('should render the navigation menu by default', () => { 
-    render (<Sidebar />);
-
-    const logoImg: HTMLImageElement = screen.getByRole('img', {name:'logo-img'});
-    const darkLogoImg: HTMLImageElement = screen.getByRole('img', {name:'dark_logo-img'});
+    const logoImg: HTMLImageElement = screen.getByRole('img', {
+      name: 'logo-img'
+    });
+    const darkLogoImg: HTMLImageElement = screen.getByRole('img', {
+      name: 'dark_logo-img'
+    });
 
     expect(screen.getAllByText('News Feed'));
     expect(screen.getAllByText('Trending'));
@@ -23,7 +26,5 @@ describe('Tests in Navbar.tsx', () => {
     const burguerBtn = screen.getByLabelText('burguer-btn');
     const openCloseBtn = screen.getByLabelText('open_close-btn');
     const contactBtn = screen.getByLabelText('contact-tbn');
-
-   })
-
- })
+  });
+});

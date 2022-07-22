@@ -1,5 +1,3 @@
 export const AppRouter = () => {
-  return (
-    <div>AppRouter</div>
-  )
-}
+  return <div>AppRouter</div>;
+};
