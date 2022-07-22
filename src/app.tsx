@@ -1,9 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { Sidebar } from './features/Sidebar'
+import { AppRouter } from './AppRouter';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <Sidebar />
-  </React.StrictMode>
-)
+export const App = () => {
+  return (
+    <div>AppRouter</div>
+  )
+}
