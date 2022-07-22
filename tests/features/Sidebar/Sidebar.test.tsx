@@ -9,10 +9,7 @@ describe('Tests in Navbar.tsx', () => {
     render (<Sidebar />);
 
     const logoImg: HTMLImageElement = screen.getByRole('img', {name:'logo-img'});
-    expect(logoImg.src).toContain('/assets/img/logo.svg');
-
     const darkLogoImg: HTMLImageElement = screen.getByRole('img', {name:'dark_logo-img'});
-    expect(darkLogoImg.src).toContain('/assets/img/logo-white.svg');
 
     expect(screen.getAllByText('News Feed'));
     expect(screen.getAllByText('Trending'));

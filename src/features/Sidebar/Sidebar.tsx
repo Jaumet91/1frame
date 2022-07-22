@@ -1,3 +1,5 @@
+import { logo, logoWhite } from "../../assets/img";
+
 export const Sidebar = () => {
   return (
     <div className='sidebar visible'>
@@ -7,12 +9,12 @@ export const Sidebar = () => {
           <img 
           aria-label='logo-img'
           className='sidebar__pic sidebar__pic_white' 
-          src='/assets/img/logo.svg' 
+          src={logo} 
           alt='light-logo'/>
           <img 
           aria-label='dark_logo-img'
           className='sidebar__pic sidebar__pic_black' 
-          src='/assets/img/logo-white.svg' 
+          src={logoWhite} 
           alt='dark-logo'/>
         </a>
         <button aria-label='burguer-btn' className='sidebar__burguer'></button>
