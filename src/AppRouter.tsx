@@ -8,20 +8,22 @@ import { AuthRoutes } from './features/Auth/routes/AuthRoutes';
 
 export const AppRouter = () => {
   return (
-    <div className="page">
+    <div className="page page_login">
       <Sidebar />
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/*" element={<GamesRoutes />} />
-          {false ? (
-            <Route path="/*" element={<Navigate to="/news-feed" replace />} />
-          ) : (
-            <Route path="/auth/*" element={<AuthRoutes />} />
-          )}
-        </Routes>
-      </main>
-      <Footer />
+      <div className="page__wrapper">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/*" element={<GamesRoutes />} />
+            {false ? (
+              <Route path="/*" element={<Navigate to="/news-feed" replace />} />
+            ) : (
+              <Route path="/auth/*" element={<AuthRoutes />} />
+            )}
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };

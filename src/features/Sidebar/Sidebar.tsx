@@ -2,7 +2,7 @@ import { logo, logoWhite } from '../../assets/img';
 
 export const Sidebar = () => {
   return (
-    <div className="sidebar visible">
+    <aside className="sidebar visible">
       <div className="sidebar__top">
         <a className="sidebar__logo" href="index">
           <img
@@ -29,14 +29,14 @@ export const Sidebar = () => {
       <div className="sidebar__wrapper">
         <div className="sidebar__inner">
           <div className="sidebar__group">
-            <aside className="sidebar__menu">
+            <div className="sidebar__menu">
               <ul>
                 <li>News Feed</li>
                 <li>Trending</li>
                 <li>Platforms</li>
                 <li>Genres</li>
               </ul>
-            </aside>
+            </div>
           </div>
           <div className="sidebar__group">
             <div className="sidebar__caption caption-sm">
@@ -83,6 +83,6 @@ export const Sidebar = () => {
           </span>
         </label>
       </div>
-    </div>
+    </aside>
   );
 };
