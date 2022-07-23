@@ -1,8 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
-//TODO: Set useForm types
-export const useForm = (initialForm = {}, formValidations = {}) => {
+import { useEffect, useMemo, useState, ChangeEvent } from 'react';
+
+export const useForm = (initialForm = {}, formValidations: any = {}) => {
   const [formState, setFormState] = useState(initialForm);
-  const [formValidation, setFormValidation] = useState({});
+  const [formValidation, setFormValidation] = useState<any>({});
 
   useEffect(() => {
     createValidators();
@@ -20,7 +20,7 @@ export const useForm = (initialForm = {}, formValidations = {}) => {
     return true;
   }, [formValidation]);
 
-  const onInputChange = ({ target }) => {
+  const onInputChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = target;
     setFormState({
       ...formState,
@@ -33,12 +33,14 @@ export const useForm = (initialForm = {}, formValidations = {}) => {
   };
 
   const createValidators = () => {
-    const formCheckedValues = {};
+    const formCheckedValues: any = {};
 
     for (const formField of Object.keys(formValidations)) {
       const [fn, errorMessage] = formValidations[formField];
 
-      formCheckedValues[`${formField}Valid`] = fn(formState[formField])
+      formCheckedValues[`${formField}Valid`] = fn(
+        formState[formField as keyof typeof formState]
+      )
         ? null
         : errorMessage;
     }

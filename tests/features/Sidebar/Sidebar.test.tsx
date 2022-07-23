@@ -5,7 +5,7 @@ import { Sidebar } from '../../../src/features/Sidebar/Sidebar';
 
 describe('Tests in <Sidebar.tsx />', () => {
   test('should render the navigation menu by default', () => {
-    render(<Sidebar />);
+    const { container } = render(<Sidebar />);
 
     const logoImg: HTMLImageElement = screen.getByRole('img', {
       name: 'logo-img'
@@ -22,6 +22,7 @@ describe('Tests in <Sidebar.tsx />', () => {
     expect(screen.getAllByText('Settings'));
     expect(screen.getAllByText('Analytics'));
     expect(screen.getAllByText("Say Hello to the creator's page"));
+    expect(container).toMatchSnapshot();
 
     const burguerBtn = screen.getByLabelText('burguer-btn');
     const openCloseBtn = screen.getByLabelText('open_close-btn');

@@ -19,7 +19,7 @@ const store = configureStore({
 
 describe('Tests in <AppRouter />', () => {
   test('should render /news-feed page by default', () => {
-    render(
+    const { container } = render(
       <Provider store={store}>
         <MemoryRouter>
           <AppRouter />
@@ -28,6 +28,7 @@ describe('Tests in <AppRouter />', () => {
     );
 
     expect(screen.getAllByText('NewsFeed'));
+    expect(container).toMatchSnapshot();
   });
 
   test("shouldn't display /auth/login if logged", () => {});
