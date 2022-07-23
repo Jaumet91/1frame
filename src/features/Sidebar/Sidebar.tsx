@@ -29,14 +29,14 @@ export const Sidebar = () => {
       <div className="sidebar__wrapper">
         <div className="sidebar__inner">
           <div className="sidebar__group">
-            <div className="sidebar__menu">
+            <aside className="sidebar__menu">
               <ul>
                 <li>News Feed</li>
                 <li>Trending</li>
                 <li>Platforms</li>
                 <li>Genres</li>
               </ul>
-            </div>
+            </aside>
           </div>
           <div className="sidebar__group">
             <div className="sidebar__caption caption-sm">
