@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
-
 import { FirebaseAuth } from '../firebase/config';
+
 import { login, logout } from '../store/auth';
+import { useAppDispatch, useAppSelector } from '../store';
+
 export const useCheckAuth = () => {
-  const { status } = useSelector((state) => state.auth);
-  const dispatch = useDispatch();
+  const { status } = useAppSelector((state) => state.auth);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     onAuthStateChanged(FirebaseAuth, async (user) => {
