@@ -8,17 +8,15 @@ import { Analitics } from '../pages/Analitics/Analitics';
 
 export const GamesRoutes = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/news-feed" element={<NewsFeed />} />
-        <Route path="/trending" element={<Trending />} />
-        <Route path="/platforms" element={<Platforms />} />
-        <Route path="/genres" element={<Genres />} />
-        <Route path="/analitics" element={<Analitics />} />
-        <Route path="/settings" element={<Settings />} />
+    <Routes>
+      <Route path="news-feed" element={<NewsFeed />} />
+      <Route path="trending" element={<Trending />} />
+      <Route path="platforms" element={<Platforms />} />
+      <Route path="genres" element={<Genres />} />
+      <Route path="analitics" element={<Analitics />} />
+      <Route path="settings" element={<Settings />} />
 
-        <Route path="*" element={<Navigate to="/news-feed" replace />} />
-      </Routes>
-    </div>
+      <Route path="*" element={<Navigate to="/news-feed" replace />} />
+    </Routes>
   );
 };

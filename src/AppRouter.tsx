@@ -1,25 +1,23 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { Header } from './features/Header';
-import { LoginPage } from './features/Login';
 import { Sidebar } from './features/Sidebar';
 import { GamesRoutes } from './features/Games/routes';
 import { Footer } from './features/Footer';
+import { AuthRoutes } from './features/Auth/routes/AuthRoutes';
 
 export const AppRouter = () => {
   return (
     <div className="page">
       <Sidebar />
-      <header>
-        <Header />
-      </header>
+      <Header />
       <main>
         <Routes>
           <Route path="/*" element={<GamesRoutes />} />
-          {true ? (
+          {false ? (
             <Route path="/*" element={<Navigate to="/news-feed" replace />} />
           ) : (
-            <Route path="/auth/login" element={<LoginPage />} />
+            <Route path="/auth/*" element={<AuthRoutes />} />
           )}
         </Routes>
       </main>
