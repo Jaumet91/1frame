@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in <AppRouter /> should render /news-feed page by default 1`] = `
+<div>
+  <div
+    class="page page_login"
+  >
+    <aside
+      class="sidebar visible"
+    >
+      <div
+        class="sidebar__top"
+      >
+        <a
+          class="sidebar__logo"
+          href="index"
+        >
+          <img
+            alt="light-logo"
+            aria-label="logo-img"
+            class="sidebar__pic sidebar__pic_white"
+            src=""
+          />
+          <img
+            alt="dark-logo"
+            aria-label="dark_logo-img"
+            class="sidebar__pic sidebar__pic_black"
+            src=""
+          />
+        </a>
+        <button
+          aria-label="burguer-btn"
+          class="sidebar__burguer"
+        />
+        <button
+          aria-label="open_close-btn"
+          class="sidebar__close"
+        >
+          <svg
+            class="icon icon-close"
+          >
+            <use
+              xlink:href="img/sprite.svg#icon-close"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="sidebar__wrapper"
+      >
+        <div
+          class="sidebar__inner"
+        >
+          <div
+            class="sidebar__group"
+          >
+            <div
+              class="sidebar__menu"
+            >
+              <ul>
+                <li>
+                  News Feed
+                </li>
+                <li>
+                  Trending
+                </li>
+                <li>
+                  Platforms
+                </li>
+                <li>
+                  Genres
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="sidebar__group"
+          >
+            <div
+              class="sidebar__caption caption-sm"
+            >
+              <span>
+                1Frame Gaming
+              </span>
+            </div>
+            <div
+              class="sidebar__menu"
+            >
+              <ul>
+                <li>
+                  Settings
+                </li>
+                <li>
+                  Analytics
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sidebar__banner"
+        >
+          <div
+            class="sidebar__bg"
+          />
+          <div
+            class="sidebar__details"
+          >
+            <div
+              class="sidebar_title h5"
+            >
+               
+              Say Hello to the creator's page
+            </div>
+            <button
+              aria-label="contact-tbn"
+              class="sidebar__btn btn btn_purple btn_wide"
+            >
+              Hello!
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sidebar__bottom"
+      >
+        <label
+          class="switch switch_theme js-switch-theme"
+        >
+          <input
+            class="switch__input"
+            type="checkbox"
+          />
+          <span
+            class="switch__in"
+          >
+            <span
+              class="switch__box"
+            />
+            <span
+              class="switch__icon"
+            >
+              <svg
+                class="icon icon-moon"
+              >
+                <use
+                  xlink:href="img/sprite.svg#icon-moon"
+                />
+              </svg>
+              <svg
+                class="icon icon-sun"
+              >
+                <use
+                  xlink:href="img/sprite.svg#icon-sun"
+                />
+              </svg>
+            </span>
+          </span>
+        </label>
+      </div>
+    </aside>
+    <div
+      class="page__wrapper"
+    >
+      <header
+        class="header"
+      >
+        Header
+      </header>
+      <main>
+        <div>
+          NewsFeed
+        </div>
+      </main>
+      <div>
+        Footer
+      </div>
+    </div>
+  </div>
+</div>
+`;

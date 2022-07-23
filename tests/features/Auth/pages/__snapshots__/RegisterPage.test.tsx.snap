@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in <RegisterPage /> should render the register page by default 1`] = `
+<div>
+  <div
+    class="login"
+  >
+    <div
+      class="login__containter"
+    >
+      <div
+        class="login__wrap"
+      >
+        <a
+          class="login__logo"
+          href="/news-feed"
+        >
+          <img
+            alt="login pic"
+            aria-label="logo-img"
+            class="login__pic"
+            src=""
+          />
+        </a>
+        <div
+          class="login__info"
+        >
+          All your favourite games in one place
+        </div>
+        <div
+          class="games"
+        >
+          <a
+            class="games__item"
+            href="#"
+          >
+            <div
+              class="games__preview"
+            >
+              <img
+                alt="games pic"
+                class="games__pic"
+                src="gamesrc"
+              />
+            </div>
+            <div
+              class="games_details"
+            >
+              <div
+                class="games__title"
+              >
+                Persona 5
+              </div>
+              <div
+                class="games__category"
+              >
+                RPG
+              </div>
+            </div>
+          </a>
+          <a
+            class="games__item"
+            href="#"
+          >
+            <div
+              class="games__preview"
+            >
+              <img
+                alt="games pic"
+                class="games__pic"
+                src="gamesrc"
+              />
+            </div>
+            <div
+              class="games_details"
+            >
+              <div
+                class="games__title"
+              >
+                Persona 5
+              </div>
+              <div
+                class="games__category"
+              >
+                RPG
+              </div>
+            </div>
+          </a>
+          <a
+            class="games__item"
+            href="#"
+          >
+            <div
+              class="games__preview"
+            >
+              <img
+                alt="games pic"
+                class="games__pic"
+                src="gamesrc"
+              />
+            </div>
+            <div
+              class="games_details"
+            >
+              <div
+                class="games__title"
+              >
+                Persona 5
+              </div>
+              <div
+                class="games__category"
+              >
+                RPG
+              </div>
+            </div>
+          </a>
+        </div>
+        <a
+          class="login__add"
+          href="/search"
+        >
+          <svg
+            class="icon icon-add-square"
+          >
+            <use
+              xlink:href="img/sprite.svg#icon-add-square"
+            />
+          </svg>
+          Discover more
+        </a>
+      </div>
+      <div
+        class="login__form"
+      >
+        <a
+          class="login__close"
+          href="/news-feed"
+        >
+          <svg
+            class="icon icon-arrow-left"
+          >
+            <use
+              xlink:href="img/sprite.svg#icon-arrow-left"
+            />
+          </svg>
+        </a>
+        <h3
+          class="login__title h3"
+        >
+          Sign up
+        </h3>
+        <div
+          class="login__line"
+        >
+          <div
+            class="login__text"
+          >
+            Already a user
+          </div>
+          <a
+            class="login__link"
+            href="/auth/login"
+          >
+            Login now
+          </a>
+        </div>
+        <div
+          class="login__row"
+        >
+          <div
+            class="login__col"
+          >
+            <div
+              class="field"
+            >
+              <label
+                class="field__label"
+                for="FirstName"
+              >
+                First name
+              </label>
+              <div
+                class="field__wrap"
+              >
+                <input
+                  class="field__input"
+                  id="FirstName"
+                  name="FirstName"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="login__col"
+          >
+            <div
+              class="field"
+            >
+              <label
+                class="field__label"
+                for="LastName"
+              >
+                Last name
+              </label>
+              <div
+                class="field__wrap"
+              >
+                <input
+                  class="field__input"
+                  id="LastName"
+                  name="LastName"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="field"
+        >
+          <label
+            class="field__label"
+            for="EmailAddress"
+          >
+            Email Address
+          </label>
+          <div
+            class="field__wrap"
+          >
+            <input
+              class="field__input"
+              id="EmailAddress"
+              name="EmailAddress"
+              type="email"
+            />
+          </div>
+        </div>
+        <div
+          class="field"
+        >
+          <label
+            class="field__label"
+            for="Password"
+          >
+            Password
+          </label>
+          <div
+            class="field__wrap"
+          >
+            <input
+              class="field__input"
+              id="Password"
+              name="Password"
+              type="password"
+            />
+          </div>
+        </div>
+        <button
+          class="login__btn btn btn_purple btn_wide"
+        >
+          Continue
+        </button>
+        <div
+          class="login__or"
+        >
+          Sign up by Google
+        </div>
+        <button
+          class="login__btn btn btn_blue btn_wide"
+        >
+          Google Account
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
