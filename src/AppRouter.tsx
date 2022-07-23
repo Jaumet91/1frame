@@ -16,8 +16,8 @@ export const AppRouter = () => {
       <main>
         <Routes>
           <Route path="/*" element={<GamesRoutes />} />
-          {false ? (
-            <Route path="/*" element={<Navigate to="/" replace />} />
+          {true ? (
+            <Route path="/*" element={<Navigate to="/news-feed" replace />} />
           ) : (
             <Route path="/auth/login" element={<LoginPage />} />
           )}
