@@ -26,7 +26,7 @@ describe('Tests in thunks.ts', () => {
     expect(dispatch).toHaveBeenCalledWith(checkingCredentials());
   });
 
-  test('startGoogleSignIn should call checkingCredentials and login - Success ', async () => {
+  test('startGoogleSignIn shoul d call checkingCredentials and login - Success ', async () => {
     const loginData = { ok: true, ...demoUser };
     await (singInWithGoogle as jest.Mock).mockReturnValue(loginData);
     await startGoogleSignIn()(dispatch);
