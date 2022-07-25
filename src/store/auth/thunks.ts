@@ -12,3 +12,14 @@ export const checkingAuthentication = () => {
     dispatch(checkingCredentials());
   };
 };
+
+export const startGoogleSignIn = () => {
+  return async (dispatch: any) => {
+    dispatch(checkingCredentials());
+
+    const result = await singInWithGoogle();
+    if (!result.ok) return dispatch(logout(result.errorMessage));
+
+    dispatch(login(result));
+  };
+};
