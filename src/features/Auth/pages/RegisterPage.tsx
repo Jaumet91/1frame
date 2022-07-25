@@ -56,7 +56,7 @@ export const RegisterPage = () => {
           </Link>
         </div>
 
-        <div className="login__form">
+        <form className="login__form">
           <Link className="login__close" to="/news-feed">
             <svg className="icon icon-arrow-left">
               <use xlinkHref="img/sprite.svg#icon-arrow-left"></use>
@@ -138,7 +138,7 @@ export const RegisterPage = () => {
           <button className="login__btn btn btn_blue btn_wide">
             Google Account
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );
