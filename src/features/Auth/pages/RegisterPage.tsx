@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom';
+
 import { logoWhite } from '../../../assets/img';
+import { startGoogleSignIn } from '../../../store/auth';
+import { useAppDispatch } from '../../../store';
 
 export const RegisterPage = () => {
+  const dispatch = useAppDispatch();
+
+  const onGoogleSignIn = () => {
+    dispatch(startGoogleSignIn());
+  };
+
   return (
     <div className="login">
       <div className="login__containter">
@@ -135,7 +144,10 @@ export const RegisterPage = () => {
             Continue
           </button>
           <div className="login__or">Sign up by Google</div>
-          <button className="login__btn btn btn_blue btn_wide">
+          <button
+            className="login__btn btn btn_blue btn_wide"
+            onClick={onGoogleSignIn}
+          >
             Google Account
           </button>
         </div>

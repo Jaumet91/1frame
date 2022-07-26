@@ -26,12 +26,24 @@ describe('Tests in thunks.ts', () => {
     expect(dispatch).toHaveBeenCalledWith(checkingCredentials());
   });
 
-  test('startGoogleSignIn shoul d call checkingCredentials and login - Success ', async () => {
+  test('startGoogleSignIn should call checkingCredentials and login - Success ', async () => {
     const loginData = { ok: true, ...demoUser };
     await (singInWithGoogle as jest.Mock).mockReturnValue(loginData);
     await startGoogleSignIn()(dispatch);
 
     expect(dispatch).toHaveBeenCalledWith(checkingCredentials());
     expect(dispatch).toHaveBeenCalledWith(login(loginData));
+  });
+
+  test('startGoogleSignIn should call checkingCredentials and login - Error', async () => {
+    const loginData = {
+      ok: false,
+      errorMessage: 'An error with Google occurred'
+    };
+    await (singInWithGoogle as jest.Mock).mockReturnValue(loginData);
+    await startGoogleSignIn()(dispatch);
+
+    expect(dispatch).toHaveBeenCalledWith(checkingCredentials());
+    expect(dispatch).toHaveBeenCalledWith(logout(loginData.errorMessage));
   });
 });
